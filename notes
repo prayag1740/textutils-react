@@ -1,0 +1,11 @@
+React JS documentation -- https://reactjs.org/docs/getting-started.html#learn-react
+
+JSX is the combination of JavaScript and HTML; basically 95% HTML with some minor chnages ; ex -- class changes to className
+
+JSX can return only 1 fragment
+
+Single Page Application -- makes 1 single call for HTML, CSS, Javascript , after which JS takes over 
+Multi Page Application -- for each subsequent page, make a seperate call to the server
+
+npm install -- makes node_modules which contains all node modules
+
