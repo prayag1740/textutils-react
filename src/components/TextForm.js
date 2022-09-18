@@ -14,6 +14,11 @@ export default function TextForm(props) {
 
   }
 
+  const handleRemoveSpecialCharcters = () => {
+    let newText = text.replace(/[^a-zA-Z ]/g, "");
+    setText(newText);
+  }
+
   const handleOnChange = (event) => {
     setText(event.target.value) ;
   }
@@ -31,6 +36,8 @@ export default function TextForm(props) {
         </div>
         <button className='btn btn-primary mx-2' onClick={handleUpClick}> Convert to Upper case</button>
         <button className='btn btn-primary mx-2' onClick={handleLowerClick}> Convert to Lower case</button>
+        <button className='btn btn-primary mx-2' onClick={handleRemoveSpecialCharcters}> Remove Special Characters</button>
+       
     </div>
     <div className='container my-5'>
       <h3>Preview</h3>
