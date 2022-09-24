@@ -12,3 +12,7 @@ npm install -- makes node_modules which contains all node modules
 State belongs to components 
 
 onclick functions should specify a function and not a function call (Ref : Navbar.js , Line 39)
+
+React routers -- go to another router with server load
+
+Exact in route -- for exact URL matching

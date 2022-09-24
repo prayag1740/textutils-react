@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 
 //Navbar component is being imported from Navbar.js
 //props are being passed to components to render dynamic flow
@@ -54,12 +60,16 @@ function App() {
 
   return (
     <>
+    <Router>
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} darkModeColor={selectDarkModeDropDown} /> 
     <Alert alert={alert} />
     <div className="container my-5">
-    <TextForm heading="Enter the text to analyze" mode={mode} alert={showAlert}/>
-    {/* <About/> */}
+    <Routes>
+    <Route exact path="/about" element={<About />} />
+    <Route exact path="/" element={<TextForm heading="Enter the text to analyze" mode={mode} alert={showAlert}/>}/>
+    </Routes>
     </div>
+    </Router>
     </>
   );
 }
