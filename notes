@@ -10,3 +10,5 @@ Multi Page Application -- for each subsequent page, make a seperate call to the 
 npm install -- makes node_modules which contains all node modules
 
 State belongs to components 
+
+onclick functions should specify a function and not a function call (Ref : Navbar.js , Line 39)

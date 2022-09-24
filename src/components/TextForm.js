@@ -26,6 +26,21 @@ export default function TextForm(props) {
     setText(event.target.value) ;
   }
 
+  const countWords = (text) => {
+    if (text.length === 0) {
+      return 0 ;
+    }
+    let newText = text.replace(/\s+/g,' ').trim();
+    return newText.split(" ").length ;
+
+  }
+
+  const countCharacters = (text) => {
+    let newText = text.replace(/\s+/g,' ').trim();
+    return newText.length ;
+
+  }
+ 
   const [text, setText] = useState(''); //for setting state variable
   //text is the current value being used ; curr it is Enter Text here
   //setText is a fucntion used to update text value
@@ -50,7 +65,7 @@ export default function TextForm(props) {
       <h3>Preview</h3>
       <p>{text.length > 0 ? text : "Enter something to preview"}</p>
       <h3> Your Text Summary</h3>
-      <p>{text.split(" ").length} words and {text.length} characters</p>
+      <p>{countWords(text)} words and {countCharacters(text)} characters</p>
       <p>{0.008 * text.split(" ").length} Minutes read</p>
     </div>
     </>
