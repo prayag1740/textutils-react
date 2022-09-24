@@ -23,7 +23,7 @@ function App() {
     })
     setTimeout(() => {
       setAlert(null);
-    }, 1500) ; //alert remains only for 1.5 secs
+    }, 500) ; //alert remains only for 1.5 secs
 
   }
 
